@@ -1639,12 +1639,12 @@
   </build>
 
   <distributionManagement>
-  <repository>
-    <id>checkstyle-test-test-repo</id>
-    <name>checkstyle-test-test-repo</name>
-    <url>https://checkstyle-test-960456282484.d.codeartifact.us-east-1.amazonaws.com/maven/test-repo/</url>
-  </repository>
-</distributionManagement>
+    <repository>
+      <id>checkstyle-test-test-repo</id>
+      <name>checkstyle-test-test-repo</name>
+      <url>https://checkstyle-test-960456282484.d.codeartifact.us-east-1.amazonaws.com/maven/test-repo/</url>
+    </repository>
+  </distributionManagement>
   
   <reporting>
     <plugins>
