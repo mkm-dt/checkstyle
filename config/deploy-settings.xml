@@ -1,13 +1,25 @@
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
+<settings xmlns="http://maven.apache.org/SETTINGS/1.2.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.2.0 http://maven.apache.org/xsd/settings-1.2.0.xsd">
+  <profiles>
+    <profile>
+      <id>checkstyle-test-test-repo</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <repositories>
+        <repository>
+          <id>checkstyle-test-test-repo</id>
+          <url>https://checkstyle-test-960456282484.d.codeartifact.us-east-1.amazonaws.com/maven/test-repo/</url>
+        </repository>
+      </repositories>
+    </profile>
+  </profiles>
+
   <servers>
     <server>
-      <!-- this config is used by our TravisCI to deploy snapshot artifacts to maven repo -->
-      <id>sonatype-nexus-snapshots</id>
-      <username>${env.CI_DEPLOY_USERNAME}</username>
-      <password>${env.CI_DEPLOY_PASSWORD}</password>
+      <id>checkstyle-test-test-repo</id>
+      <username>aws</username>
+      <password>${env.CODEARTIFACT_AUTH_TOKEN}</password>
     </server>
   </servers>
 </settings>
