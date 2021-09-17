@@ -193,6 +193,13 @@
     <system>travis</system>
     <url>https://travis-ci.org/checkstyle/checkstyle</url>
   </ciManagement>
+  <distributionManagement>
+    <repository>
+      <id>checkstyle-test-test-repo</id>
+      <name>checkstyle-test-test-repo</name>
+      <url>https://checkstyle-test-960456282484.d.codeartifact.us-east-1.amazonaws.com/maven/test-repo/</url>
+    </repository>
+  </distributionManagement>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -1638,14 +1645,6 @@
     </plugins>
   </build>
 
-  <distributionManagement>
-    <repository>
-      <id>checkstyle-test-test-repo</id>
-      <name>checkstyle-test-test-repo</name>
-      <url>https://checkstyle-test-960456282484.d.codeartifact.us-east-1.amazonaws.com/maven/test-repo/</url>
-    </repository>
-  </distributionManagement>
-  
   <reporting>
     <plugins>
       <plugin>
